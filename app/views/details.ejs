@@ -3,16 +3,42 @@
 <main>
     <section>
         <% if (locals.pokemon) { %>
-        <div>
-            <h2><%=pokemon.name%></h2>
-            <img class="picture" src="/img/<%pokemon.numero%>.png" alt="pokemon">
-            <p><%=pokemon.pv%></p> 
-            <p><%=pokemon.attaque%></p>  
-            <p><%=pokemon.defense%></p>  
-            <p><%=pokemon.attaque_spe%></p>  
-            <p><%=pokemon.defense_spe%></p>
-            <p><%=pokemon.vitesse%></p>
-        </div>
+            <h2>Détails de <%=pokemon.nom%></h2>
+            <div class="fiche">
+                <img class="details_pic" src="/img/<%=pokemon.numero%>.png" alt="pokemon">
+                <div class="points">
+                    <div class="row">
+                        <p>PV</p>
+                        <p><%=pokemon.pv%></p>
+                        <progress max="100" value=<%=Math.round((pokemon.pv/255)*100)%>></progress>
+                    </div>
+                    <div class="row">
+                        <p>Attaque</p>
+                        <p><%=pokemon.attaque%></p>
+                        <progress max="100" value=<%=Math.round((pokemon.attaque/255)*100)%>></progress>
+                    </div>
+                    <div class="row">
+                        <p>Défense</p>
+                        <p><%=pokemon.defense%></p>
+                        <progress max="100" value=<%=Math.round((pokemon.defense/255)*100)%>></progress>
+                    </div>
+                    <div class="row">
+                        <p>Attaque spéciale</p>
+                        <p><%=pokemon.attaque_spe%></p>
+                        <progress max="100" value=<%=Math.round((pokemon.attaque_spe/255)*100)%>></progress>
+                    </div>
+                    <div class="row">
+                        <p>Défense spéciale</p>
+                        <p><%=pokemon.defense_spe%></p>
+                        <progress max="100" value=<%=Math.round((pokemon.defense_spe/255)*100)%>></progress>
+                    </div>
+                    <div class="row">
+                        <p>Vitesse</p>
+                        <p><%=pokemon.vitesse%></p>
+                        <progress max="100" value=<%=Math.round((pokemon.vitesse/255)*100)%>></progress>
+                    </div>
+                </div>
+            </div>
         <% } %>
     </section>
 </main>

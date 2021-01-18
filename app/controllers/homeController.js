@@ -1,7 +1,7 @@
 const dataMapper = require('../dataMapper');
 
 const homeController = {
-    homePage: (request, response) => {
+    homePage: (_, response) => {
         dataMapper.getAllPokemons((error, pokemons) => {
             if (error) {
                 response.send('Une erreur est survenue, dsl !');

@@ -21,7 +21,7 @@ const dataMapper = {
         pokemon_id = Number(pokemon_id);
         const queryObj = {
             text: `SELECT * FROM "pokemon" WHERE id = ${pokemon_id};`,
-            // value: [pokemon_id],
+            value: [pokemon_id],
         };
         database.query(queryObj, (error, result) => {
             if (error) {
