@@ -1,10 +1,6 @@
 #### Installer les modules
 
-- $ npm init -y
-- $ npm install express
-- $ npm install ejs
-- $ npm install pg
-- $ npm install dotenv
+- $ npm install dotenv express pg ejs
 
 #### Créer `.env` à partir d' `.env_example`
 
